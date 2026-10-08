@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Present perfect questions & Online shopping</title>
+<style>
+:root{--bg:#f3f7f8;--card:#fff;--ink:#17262b;--mut:#5b6e74;--teal:#2f9aa6;--plum:#a0245f;--line:#cfdde1;--chip:#fff4cf;--ok:#d5f2dc;--bad:#fbd9d9;--okb:#2a9d4b;--badb:#d23b3b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191c;--card:#182428;--ink:#e8f1f3;--mut:#9fb3b9;--line:#2c3f45;--chip:#4a4020;--ok:#1d4a2a;--bad:#5a2424}}
+:root[data-theme="dark"]{--bg:#10191c;--card:#182428;--ink:#e8f1f3;--mut:#9fb3b9;--line:#2c3f45;--chip:#4a4020;--ok:#1d4a2a;--bad:#5a2424}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 Georgia,"Times New Roman",serif}
+h1,h2,button,.chip,.tab{font-family:"Trebuchet MS",Verdana,sans-serif}
+header{background:var(--teal);color:#fff;padding:22px 18px 0}
+header h1{margin:0;font-size:1.5rem}header p{margin:4px 0 14px;opacity:.9}
+.tabs{display:flex;gap:6px;max-width:820px;margin:0 auto}
+.tab{flex:1;border:0;padding:11px 8px;border-radius:12px 12px 0 0;background:rgba(255,255,255,.25);color:#fff;font-size:1rem;cursor:pointer}
+.tab.on{background:var(--bg);color:var(--ink);font-weight:700}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px 40px}
+header>div{max-width:820px;margin:0 auto}
+.pg{display:none}.pg.on{display:block}
+.pg.two h2{color:var(--plum)}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:16px 0}
+.ex h2{margin:0 0 4px;font-size:1.1rem;color:var(--teal)}
+.inst{color:var(--mut);margin:0 0 12px}
+.bank{display:flex;flex-wrap:wrap;gap:8px;padding:10px;border:2px dashed var(--line);border-radius:12px;min-height:50px;margin-bottom:12px}
+.chip{background:var(--chip);border:1px solid #d9b94a;border-radius:8px;padding:5px 11px;cursor:grab;user-select:none;font-size:.98rem}
+.chip.sel{outline:3px solid var(--teal)}
+.row{margin:8px 0}
+.slot{display:inline-flex;min-width:96px;min-height:34px;vertical-align:middle;border-bottom:3px solid var(--teal);background:rgba(47,154,166,.1);border-radius:6px 6px 0 0;padding:0 4px;margin:0 3px;align-items:center;justify-content:center}
+.slot.ok{background:var(--ok);border-color:var(--okb)}.slot.bad{background:var(--bad);border-color:var(--badb)}
+.slot .chip{border:0;background:transparent;padding:3px 6px;font-weight:700}
+.line{min-height:48px;border-bottom:3px solid var(--teal);padding:6px;display:flex;flex-wrap:wrap;gap:6px;border-radius:6px;margin-bottom:6px}
+.line.ok{background:var(--ok)}.line.bad{background:var(--bad)}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+button.b{border:0;border-radius:9px;padding:8px 14px;background:var(--teal);color:#fff;font-size:.95rem;cursor:pointer}
+button.b.g{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.pg.two button.b:not(.g){background:var(--plum)}
+.msg{font-family:"Trebuchet MS",sans-serif;font-weight:700}
+.box{border-left:5px solid var(--plum);background:rgba(160,36,95,.08);padding:10px 14px;border-radius:8px;margin:8px 0}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:10px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.opt.ok{background:var(--ok)}.opt.bad{background:var(--bad)}
+ol.t{padding-left:22px}
+.hide{display:none}
+</style></head><body>
+<header><div><h1>Present perfect questions · Online shopping</h1>
+<p>Перетаскивайте слова в пропуски (или нажмите слово, затем пропуск).</p>
+<div class="tabs"><button class="tab on" data-p="p1">Language focus</button><button class="tab" data-p="p2">Speaking</button></div></div></header>
+<main class="wrap">
+<section class="pg on" id="p1"></section>
+<section class="pg two" id="p2"></section>
+</main>
+<script>
+const S=(a)=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
+const EX=[
+{pg:'p1',t:'1. Complete the questions',i:'Drag the words into the gaps. Example: <i>Have</i> you ever received spam?',k:'fill',bank:['attacked',"'s",'have','Has'],items:[["Has a hacker __ your computer?",['attacked']],["__ your computer had a virus?",['Has']],["What problems __ you had?",['have']],["What __ happened to you?",["'s"]]]},
+{pg:'p1',t:'2. Order the words',i:'Tap the words in the right order to make a question.',k:'order',items:['What websites have you visited recently?','Have your friends downloaded any music recently?','Why have you put that photo on the internet?','Have you ever lost a computer file?','Has she ever visited a chat room?','What have they written on the message board?']},
+{pg:'p1',t:'3. Present perfect',i:'Choose the correct present perfect form for each gap.',k:'fill',bank:['Have you read','Has a virus attacked','Has your friend made','Have your grandparents used','Have you emailed','Has your teacher used'],items:[["__ any good jokes on the internet?",['Have you read']],["__ your computer recently?",['Has a virus attacked']],["__ money on the internet?",['Has your friend made']],["__ the internet?",['Have your grandparents used']],["__ someone recently?",['Have you emailed']],["__ the internet in class?",['Has your teacher used']]]},
+{pg:'p1',t:'4. Dialogue: Jenna and Tony',i:'Complete the questions in the present perfect.',k:'fill',bank:['Have you made','have you won','Have you created','have visited','Have you met','Have you stolen'],items:[["<b>Jenna</b> __ any money online?",['Have you made']],["<b>Tony</b> No, I haven't made any money, but I've won things in competitions.",[]],["<b>Jenna</b> What __?",['have you won']],["<b>Tony</b> Oh, computer games, a webcam. Things like that.",[]],["<b>Jenna</b> __ your own blog?",['Have you created']],["<b>Tony</b> Yes, I've created a blog with photos.",[]],["<b>Jenna</b> How many people __ it?",['have visited']],["<b>Tony</b> Nearly two hundred people have visited it. It's very good.",[]],["<b>Jenna</b> __ any interesting people online?",['Have you met']],["<b>Tony</b> Yes, I've met a lot of hackers.",[]],["<b>Jenna</b> Hackers! __ anything?",['Have you stolen']],["<b>Tony</b> No, I haven't stolen anything, but I've read some very secret files!",[]]]},
+{pg:'p1',t:'5. Key phrases: Experiences',i:'Put the answers in order of frequency: 1 = never, 5 = very frequent.',k:'fill',bank:['Yes, occasionally.','Yes, a lot of times.','No, never.','Yes, a few times.','Yes, once (or twice).'],items:[["<b>1</b> __",['No, never.']],["<b>2</b> __",['Yes, once (or twice).']],["<b>3</b> __",['Yes, a few times.']],["<b>4</b> __",['Yes, occasionally.']],["<b>5</b> __",['Yes, a lot of times.']]]},
+{pg:'p1',t:'6. Activate',k:'static',h:'<p class="inst">Find someone who has done 1–8. Ask and answer using the key phrases.<br><i>Have you ever won an online competition? – Yes, once. What about you?</i></p><ol class="t"><li>(win) an online competition</li><li>(send) jokes to friends by email</li><li>(have) a bad online experience</li><li>(have) problems with a virus</li><li>(buy) clothes on the internet</li><li>(write) a blog</li><li>(meet) people in a chat room</li><li>(copy) homework from a website</li></ol><div class="box"><b>Finished?</b> Write true sentences about your friends\' answers. <i>Altynay\'s won an online competition once.</i></div>'},
+{pg:'p2',t:'1–2. Listening: Lucy online',k:'static',h:'<p class="inst">Look at the photo. How long do you think Lucy has been on the computer? Listen to dialogue 1.24. What does Lucy want to buy?</p><div id="quiz"></div>'},
+{pg:'p2',t:'3. Key phrases: Buying things online',i:'Complete the phrases from the dialogue.',k:'fill',bank:['browsing','bargain','sold','reviews','include','payment'],items:[["I'm just __ through an online catalogue.",['browsing']],["It's a real __!",['bargain']],["Unfortunately it's __ out.",['sold']],["This one has got really good customer __.",['reviews']],["Does the price __ postage and packing?",['include']],["Do they accept __ by credit card?",['payment']]]},
+{pg:'p2',t:'4. Language point: can, could, may',k:'static',h:'<div class="box">We use <i>can, could</i> and <i>may</i> to ask permission or make a request. We use <i>can</i> and <i>may</i>, but not <i>could</i>, to give permission.<br>“Can I buy a new phone, Dad?” “No, you can\'t.”<br>“Could I try this dress on?” “Of course you can.”<br>“May I pay by credit card?” “Yes, you may.”</div><p class="inst">Find three more examples in the dialogue.</p><button class="b" id="rv">Show examples</button><div id="rvo" class="hide box"><i>May I order it?</i> · <i>You can order it.</i> · <i>Could you ask me next time?</i> · <i>Can you order it today…?</i></div>'},
+{pg:'p2',t:'5. Order the words',i:'Make sentences. One word in each set is extra — leave it out!',k:'order',items:[['Can I ask you a question?','to'],['Yes, of course you may.','could'],['Could you open the window, please?','do'],["No, you can't borrow my headphones.",'can'],['May I use your phone?','it']]},
+{pg:'p2',t:'6. Activate: role-play',k:'static',h:'<p class="inst">Choose one situation, prepare a dialogue with a partner, practise, then change roles.</p><div class="box"><b>A</b> You want to buy some books from an online bookstore, but you have never shopped online before. Ask your partner for help.</div><div class="box"><b>B</b> You have seen a cheap tablet online and want to buy it. However, you don\'t have an account or a credit card. Ask your mother or father for help.</div>'}
+];
+const D={drag:null,sel:null};
+function chip(t){const c=document.createElement('span');c.className='chip';c.textContent=t;c.draggable=true;
+c.ondragstart=e=>{D.drag=c;e.dataTransfer.setData('text','x')};
+c.onclick=e=>{e.stopPropagation();const p=c.parentElement;
+ if(p.classList.contains('slot')&&!D.sel){p.closest('.ex').querySelector('.bank').appendChild(c);p.classList.remove('ok','bad');return}
+ if(D.sel)D.sel.classList.remove('sel');D.sel=D.sel===c?null:c;if(D.sel)c.classList.add('sel')};return c}
+function put(s,c){const old=s.querySelector('.chip');if(old)s.closest('.ex').querySelector('.bank').appendChild(old);s.appendChild(c);s.classList.remove('ok','bad')}
+function build(e,box){
+ box.innerHTML='<h2>'+e.t+'</h2>'+(e.i?'<p class="inst">'+e.i+'</p>':'');
+ if(e.k==='static'){box.insertAdjacentHTML('beforeend',e.h);return}
+ const msg=document.createElement('span');msg.className='msg';
+ const ctl=document.createElement('div');ctl.className='ctl';
+ const mk=(t,f,g)=>{const b=document.createElement('button');b.className='b'+(g?' g':'');b.textContent=t;b.onclick=f;ctl.appendChild(b)};
+ let chk,rst,show;
+ if(e.k==='fill'){
+  const bank=document.createElement('div');bank.className='bank';
+  bank.ondragover=x=>x.preventDefault();bank.ondrop=x=>{x.preventDefault();if(D.drag){bank.appendChild(D.drag);D.drag.parentElement;D.drag=null}box.querySelectorAll('.slot').forEach(s=>s.classList.remove('ok','bad'))};
+  box.appendChild(bank);
+  e.items.forEach(([txt,ans])=>{const r=document.createElement('div');r.className='row';let n=0;
+   r.innerHTML=txt.replace(/__/g,()=>'<span class="slot" data-a="'+ans[n++].replace(/"/g,'&quot;')+'"></span>');box.appendChild(r)});
+  box.querySelectorAll('.slot').forEach(s=>{s.ondragover=x=>x.preventDefault();s.ondrop=x=>{x.preventDefault();if(D.drag)put(s,D.drag);D.drag=null};
+   s.onclick=()=>{if(D.sel){put(s,D.sel);D.sel.classList.remove('sel');D.sel=null}}});
+  const fillBank=()=>{bank.innerHTML='';S(e.bank).forEach(w=>bank.appendChild(chip(w)))};fillBank();
+  chk=()=>{let ok=0;const ss=box.querySelectorAll('.slot');ss.forEach(s=>{const c=s.querySelector('.chip');const g=c&&c.textContent===s.dataset.a;s.classList.remove('ok','bad');if(c)s.classList.add(g?'ok':'bad');if(g)ok++});msg.textContent=ok+' / '+ss.length+(ok==ss.length?' ✔ Well done!':'')};
+  rst=()=>{box.querySelectorAll('.slot').forEach(s=>{s.className='slot';s.innerHTML=''});fillBank();msg.textContent=''};
+  show=()=>{box.querySelectorAll('.slot').forEach(s=>{s.innerHTML='';const c=chip(s.dataset.a);s.appendChild(c);s.className='slot ok'});bank.innerHTML='';msg.textContent=''};
+ }else{
+  const items=e.items.map(x=>Array.isArray(x)?x:[x]);
+  items.forEach(([ans,extra])=>{const r=document.createElement('div');r.className='row';
+   const line=document.createElement('div');line.className='line';const pool=document.createElement('div');pool.className='bank';
+   let w=ans.split(' ');if(extra)w=w.concat(extra);r._ans=ans;r._line=line;r._pool=pool;r._w=w;
+   const fill=()=>{line.innerHTML='';line.className='line';pool.innerHTML='';S(w).forEach(t=>{const b=document.createElement('span');b.className='chip';b.textContent=t;b.onclick=()=>{(b.parentElement===pool?line:pool).appendChild(b);line.className='line'};pool.appendChild(b)})};
+   r._fill=fill;fill();r.append(line,pool);box.appendChild(r)});
+  const rows=()=>[...box.querySelectorAll('.row')];
+  chk=()=>{let ok=0;rows().forEach(r=>{const g=[...r._line.children].map(c=>c.textContent).join(' ')===r._ans;r._line.className='line '+(g?'ok':'bad');if(g)ok++});msg.textContent=ok+' / '+rows().length+(ok==rows().length?' ✔ Well done!':'')};
+  rst=()=>{rows().forEach(r=>r._fill());msg.textContent=''};
+  show=()=>{rows().forEach(r=>{r._line.innerHTML='';r._pool.innerHTML='';r._ans.split(' ').forEach(t=>{const b=document.createElement('span');b.className='chip';b.textContent=t;r._line.appendChild(b)});r._line.className='line ok'});msg.textContent=''};
+ }
+ mk('Check',chk);mk('Reset',rst,1);mk('Show answers',show,1);ctl.appendChild(msg);box.appendChild(ctl)}
+EX.forEach(e=>{const d=document.createElement('div');d.className='ex';document.getElementById(e.pg).appendChild(d);build(e,d)});
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{document.querySelectorAll('.tab,.pg').forEach(x=>x.classList.remove('on'));t.classList.add('on');document.getElementById(t.dataset.p).classList.add('on');scrollTo(0,0)});
+const q=document.getElementById('quiz');
+['An e-book reader','A phone','A birthday dress'].forEach((o,i)=>{const b=document.createElement('button');b.className='opt';b.textContent=o;b.onclick=()=>{b.classList.add(i==0?'ok':'bad')};q.appendChild(b)});
+document.getElementById('rv').onclick=()=>document.getElementById('rvo').classList.toggle('hide');
+</script></body></html>
